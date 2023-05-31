@@ -4,6 +4,7 @@ public class Main {
 
 
    public static void limpiarConsola() {
+    //--------------////// poner aqui! código funcional para limpiar consola(att Jaime xd) /////--------------//
        System.out.print("\033[H\033[2J");
        System.out.flush();
    }
@@ -11,8 +12,6 @@ public class Main {
 
    public static void main(String[] args) {
        Scanner leajaime = new Scanner(System.in);
-
-
 
 
 
@@ -38,7 +37,7 @@ public class Main {
        System.out.println(" 0. salir ");
 
 
-       //--------------////// punto 1 /////--------------//
+      
 
 
        while (!menu.equals(0)) {
@@ -47,6 +46,7 @@ public class Main {
            menu = Integer.valueOf(leajaime.next());
            switch (menu) {
                case 1:
+                //--------------////// punto 1 /////--------------//
                    limpiarConsola();
                    break;
                case 2:
