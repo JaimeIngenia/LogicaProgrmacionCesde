@@ -4,7 +4,7 @@ public class Main {
 
 
    public static void limpiarConsola() {
-    //--------------////// poner aqui! código funcional para limpiar consola(att Jaime xd) /////--------------//
+        //--------------////// poner aqui! código funcional para limpiar consola(att Jaime xd) /////--------------//
        System.out.print("\033[H\033[2J");
        System.out.flush();
    }
@@ -16,45 +16,82 @@ public class Main {
 
 
 
-       ///////////////declaracon//////////////////
+
+
+       ///////////////Declaracion//////////////////
+
        String x;
        Integer menu = 1;
-       Double valor_bruto, iva, valor_total;
+       Double valor_bruto,valor_unitario, iva, valor_total;
        String nombre_articulo;
        Integer cantidad;
+
+
        //////////////inicializacion/////////////
 
+       iva = 0.19;
 
 
-
-       //--------------////// PROGRAMA /////--------------//
-       System.out.println("                    MENU EN FACTURACION");
-       System.out.println("elija una opcion ");
-       System.out.println("  ");
-       System.out.println(" 1. ventas regulares ");
-       System.out.println(" 2. ventas credito ");
-       System.out.println(" 3. clientes registrados");
-       System.out.println(" 0. salir ");
-
-
-      
+        //////////////PROGRAMA/////////////
 
 
        while (!menu.equals(0)) {
 
 
+           //--------------////// MENU /////--------------//
+           System.out.println("                    MENU EN FACTURACION");
+           System.out.println("   ");
+           System.out.println("Elija una opcion ");
+           System.out.println("  ");
+           System.out.println(" 1. Ventas regulares ");
+           System.out.println(" 2. Ventas credito ");
+           System.out.println(" 3. Clientes registrados");
+           System.out.println(" 0. Salir ");
+
+
+          
+
+
            menu = Integer.valueOf(leajaime.next());
            switch (menu) {
                case 1:
-                //--------------////// punto 1 /////--------------//
-                   limpiarConsola();
+                   System.out.println("Dijite el nombre del articulo");
+                   nombre_articulo = leajaime.next();
+
+
+                   System.out.println("Dijite el valor del articulo");
+                   valor_unitario = leajaime.nextDouble();
+
+
+                   System.out.println("Dijite la cantidad de piezas del articulo");
+                   cantidad = leajaime.nextInt();
+
+
+                   //operaciones
+
+
+                   valor_bruto = cantidad * valor_unitario;
+                   valor_total = valor_bruto-(iva*valor_bruto) ;
+
+
+                   //mostrar//
+
+
+                   System.out.println(" El nombre del articulo es " + nombre_articulo );
+                   System.out.println(" El valor bruto de la venta es " + valor_bruto );
+                   System.out.println(" El valor del iva es " + iva );
+                   System.out.println(" El valor total de la venta es " + valor_total );
+
+                    limpiarConsola();
+
+
                    break;
                case 2:
                    limpiarConsola();
                    break;
                case 3:
                    limpiarConsola();
-                   break;   
+                   break;
                default:
                    break;
            }
