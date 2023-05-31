@@ -1,0 +1,70 @@
+import javax.swing.*;
+import java.util.Scanner;
+public class Main {
+
+
+   public static void limpiarConsola() {
+       System.out.print("\033[H\033[2J");
+       System.out.flush();
+   }
+
+
+   public static void main(String[] args) {
+       Scanner leajaime = new Scanner(System.in);
+
+
+
+
+
+
+       ///////////////declaracon//////////////////
+       String x;
+       Integer menu = 1;
+       Double valor_bruto, iva, valor_total;
+       String nombre_articulo;
+       Integer cantidad;
+       //////////////inicializacion/////////////
+
+
+
+
+       //--------------////// PROGRAMA /////--------------//
+       System.out.println("                    MENU EN FACTURACION");
+       System.out.println("elija una opcion ");
+       System.out.println("  ");
+       System.out.println(" 1. ventas regulares ");
+       System.out.println(" 2. ventas credito ");
+       System.out.println(" 3. clientes registrados");
+       System.out.println(" 0. salir ");
+
+
+       //--------------////// punto 1 /////--------------//
+
+
+       while (!menu.equals(0)) {
+
+
+           menu = Integer.valueOf(leajaime.next());
+           switch (menu) {
+               case 1:
+                   limpiarConsola();
+                   break;
+               case 2:
+                   limpiarConsola();
+                   break;
+               case 3:
+                   limpiarConsola();
+                   break;   
+               default:
+                   break;
+           }
+
+
+
+
+       }
+
+
+   }
+}
+
